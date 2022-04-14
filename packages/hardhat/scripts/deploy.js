@@ -22,9 +22,20 @@ const main = async () => {
   console.log(" \n")*/
 
   // deploy the contract with all the artworks forSale
-  const yourCollectible = await deploy("YourCollectible"/*,[ bytes32Array ]*/) // <-- add in constructor args like line 19 vvvv
+  //const yourCollectible = await deploy("YourCollectible"/*,[ bytes32Array ]*/) // <-- add in constructor args like line 19 vvvv
+  const yourCollectible = await deploy("YourCollectible"/*,[ bytes32Array ]*/)
+  const floor1 = await deploy("Floor1"/*,[ bytes32Array ]*/)
+  await yourCollectible.setfloorAddr(1, floor1.address);
+  await yourCollectible.setfloorAddr(2, floor1.address);
+  await yourCollectible.setfloorAddr(3, floor1.address);
+  await yourCollectible.setfloorAddr(4, floor1.address);
+  await yourCollectible.setfloorAddr(5, floor1.address);
+  await yourCollectible.setfloorAddr(6, floor1.address);
+  await yourCollectible.setfloorAddr(7, floor1.address);
+  await yourCollectible.setfloorAddr(8, floor1.address);
+  await yourCollectible.setfloorAddr(9, floor1.address);
 
-  yourCollectible.transferOwnership("0x34aA3F359A9D614239015126635CE7732c18fDF3") //austingriffith.eth
+  //yourCollectible.transferOwnership("0x34aA3F359A9D614239015126635CE7732c18fDF3") //austingriffith.eth
 
   //const yourContract = await ethers.getContractAt('YourContract', "0xaAC799eC2d00C013f1F11c37E654e59B0429DF6A") //<-- if you want to instantiate a version of a contract at a specific address!
   //const secondContract = await deploy("SecondContract")

@@ -139,19 +139,18 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "",
+        "name": "_floor",
         "type": "uint256"
-      }
-    ],
-    "name": "chubbiness",
-    "outputs": [
+      },
       {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
+        "internalType": "string",
+        "name": "_data",
+        "type": "string"
       }
     ],
-    "stateMutability": "view",
+    "name": "climb",
+    "outputs": [],
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -214,19 +213,6 @@
       }
     ],
     "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "mintItem",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -365,6 +351,24 @@
       }
     ],
     "name": "setApprovalForAll",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_floor",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_addr",
+        "type": "address"
+      }
+    ],
+    "name": "setfloorAddr",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
